@@ -1,0 +1,12 @@
+
+{
+  "name": "FitFuel - Calorie Tracker",
+  "short_name": "FitFuel",
+  "description": "Track your calories, food, water, workouts and weight.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5faf6",
+  "theme_color": "#16a36a",
+  "orientation": "portrait",
+  "icons": []
+}
