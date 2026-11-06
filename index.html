@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#16a36a" />
     <meta name="description" content="FitFuel - Track your calories, food, water, workouts and weight." />
 
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="manifest" href="/fitfuel/manifest.webmanifest" />
 
     <title>FitFuel - Calorie Tracker</title>
   </head>
@@ -20,7 +20,7 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
+          navigator.serviceWorker.register('/fitfuel/sw.js')
             .catch((error) => console.error('Service Worker registration failed:', error));
         });
       }

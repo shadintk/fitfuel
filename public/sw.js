@@ -1,9 +1,9 @@
 
-const CACHE_NAME = 'fitfuel-v1';
+const CACHE_NAME = 'fitfuel-v2';
 
 const APP_FILES = [
-  '/',
-  '/index.html'
+  '/fitfuel/',
+  '/fitfuel/index.html'
 ];
 
 self.addEventListener('install', (event) => {
@@ -19,7 +19,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) =>
       Promise.all(
         cacheNames
-          .filter((name) => name !== CACHE_NAME)
+          .filter((name) => name.startsWith('fitfuel-') && name !== CACHE_NAME)
           .map((name) => caches.delete(name))
       )
     )
@@ -38,7 +38,7 @@ self.addEventListener('fetch', (event) => {
   if (event.request.mode === 'navigate') {
     event.respondWith(
       fetch(event.request).catch(() =>
-        caches.match('/index.html')
+        caches.match('/fitfuel/index.html')
       )
     );
   }
