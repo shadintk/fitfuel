@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#16a36a" />
+    <meta name="description" content="FitFuel - Track your calories, food, water, workouts and weight." />
+
+    <link rel="manifest" href="/fitfuel/manifest.webmanifest" />
+
+    <title>FitFuel - Calorie Tracker</title>
+    <script type="module" crossorigin src="/fitfuel/assets/index-BWIvzyU8.js"></script>
+    <link rel="stylesheet" crossorigin href="/fitfuel/assets/index-Djksbkrj.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/fitfuel/sw.js')
+            .catch((error) => console.error('Service Worker registration failed:', error));
+        });
+      }
+    </script>
+  </body>
+</html>
